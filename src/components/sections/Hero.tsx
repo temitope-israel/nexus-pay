@@ -228,10 +228,10 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               custom={0.5}
-              className="
-                grid grid-cols-2 sm:grid-cols-4
-                gap-6 pt-4
-                border-t border-bg-border
+              className="grid grid-cols-2 sm:grid-cols-4
+    gap-4 sm:gap-6 pt-4
+    border-t border-bg-border
+    w-full
               "
             >
               {heroContent.stats.map((stat) => (

@@ -108,12 +108,12 @@ const PricingCard = ({
       custom={index * 0.1}
       viewport={{ once: true, margin: "-50px" }}
       // Highlighted card is slightly taller and elevated
-      className={`
-        relative rounded-2xl p-8 flex flex-col
-        transition-all duration-300
-        ${tier.highlighted
-          ? "bg-brand-green border-2 border-brand-green shadow-2xl shadow-brand-green/20 scale-105"
-          : "glass-card border border-bg-border hover:border-brand-green/30 hover:-translate-y-1"
+      className={`elative rounded-2xl p-8 flex flex-col
+  transition-all duration-300
+  ${tier.highlighted
+    ? "bg-brand-green border-2 border-brand-green shadow-2xl shadow-brand-green/20 scale-105"
+    : "glass-card border border-bg-border hover:border-brand-green/30 hover:-translate-y-1"
+
         }
       `}
     >

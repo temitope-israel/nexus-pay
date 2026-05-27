@@ -191,10 +191,11 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="
-              fixed top-16 left-0 right-0 z-40
-              bg-bg-surface/95 backdrop-blur-md
-              border-b border-bg-border
-              md:hidden overflow-hidden
+            fixed top-16 left-0 right-0 z-40
+  bg-bg-base/98 backdrop-blur-md
+  border-b border-bg-border
+  md:hidden overflow-hidden
+  shadow-xl shadow-black/20
             "
           >
             <div className="container-custom py-6 flex flex-col gap-4">
