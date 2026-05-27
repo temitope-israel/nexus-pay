@@ -9,7 +9,7 @@
 // Author: Temitope Israel Omoniyi
 // ============================================================
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   Zap,
   Globe,
@@ -36,7 +36,8 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 // ── Animation Variants ────────────────────────────────────────
-const fadeUp = {
+// Explicitly cast to 'Variants' type to fix the TypeScript custom argument bug
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (delay: number = 0) => ({
     opacity: 1,
@@ -191,7 +192,7 @@ const Features = () => {
         {/* Auto-fills 3 columns on desktop, 1 on mobile.
             Large cards (md:col-span-2) break the uniform grid
             creating the bento asymmetry */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />
           ))}

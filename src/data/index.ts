@@ -194,3 +194,48 @@ export const pricingTiers: PricingTier[] = [
     highlighted: false,
   },
 ];
+
+
+// FAQ section — common questions about Nexus Pay
+export const faqs = [
+  {
+    question: "How long does it take to get verified?",
+    answer:
+      "Most businesses are verified within 24 hours. We review your CAC registration, BVN, and business details. For enterprise accounts, our compliance team will reach out directly to fast-track the process.",
+  },
+  {
+    question: "What payment methods does Nexus Pay support?",
+    answer:
+      "We support bank transfers, debit/credit cards (Visa, Mastercard, Verve), USSD, mobile money (across 15+ African countries), and QR code payments. All through a single API integration.",
+  },
+  {
+    question: "Is my money safe with Nexus Pay?",
+    answer:
+      "Absolutely. Nexus Pay is licensed by the Central Bank of Nigeria (CBN) and PCI-DSS Level 1 compliant. Customer funds are held in insured escrow accounts completely separate from our operational funds.",
+  },
+  {
+    question: "Can I accept payments from outside Nigeria?",
+    answer:
+      "Yes. With the Growth and Enterprise plans, you can accept payments from 40+ African markets and internationally. We handle currency conversion automatically at competitive exchange rates.",
+  },
+  {
+    question: "What are the transaction fees?",
+    answer:
+      "Starter plan: 1.5% per transaction. Growth plan: 1.0% per transaction. Enterprise: custom rates negotiated based on your volume. There are no setup fees, monthly minimums, or hidden charges.",
+  },
+  {
+    question: "How do I integrate Nexus Pay into my app?",
+    answer:
+      "We offer REST APIs, JavaScript/TypeScript SDKs, React Native libraries, and no-code plugins for Shopify, WooCommerce, and WordPress. Most developers complete integration in under a day.",
+  },
+  {
+    question: "How quickly are settlements processed?",
+    answer:
+      "Growth and Enterprise plans get real-time settlements — money hits your account within minutes of a successful transaction. Starter plan settlements are processed within 24 hours on business days.",
+  },
+  {
+    question: "Do you offer refunds or dispute resolution?",
+    answer:
+      "Yes. Our dashboard includes a full dispute management system. You can issue full or partial refunds directly, and our team mediates chargebacks on your behalf with a 92% merchant success rate.",
+  },
+];

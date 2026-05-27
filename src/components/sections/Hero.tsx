@@ -11,17 +11,17 @@
 // Author: Temitope Israel Omoniyi
 // ============================================================
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight, Play, TrendingUp, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { heroContent } from "@/data";
 
 // ── Animation Variants ────────────────────────────────────────
-// Defined outside component to avoid recreation on each render
+// Added explicit 'Variants' typing to prevent compilation failures with custom parameters
 
 // Fades in and slides up — used on most elements
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (delay: number = 0) => ({
     opacity: 1,
@@ -31,7 +31,7 @@ const fadeUp = {
 };
 
 // Fades in only — used on background elements
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: (delay: number = 0) => ({
     opacity: 1,
@@ -51,9 +51,9 @@ const Hero = () => {
       {/* ── Background Grid Pattern ───────────────────────────── */}
       {/* Subtle dot grid gives the section a technical, fintech feel */}
       <div
-        className="absolute inset-0 z-0 opacity-20"
+        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, #1F2E28 1px, transparent 1px)`,
+          backgroundImage: "radial-gradient(circle, #1F2E28 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -87,7 +87,7 @@ const Hero = () => {
 
       {/* ── Main Content ──────────────────────────────────────── */}
       <div className="container-custom relative z-10 py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* ── Left Column — Text Content ──────────────────────── */}
           <div className="flex flex-col gap-8">
@@ -183,6 +183,7 @@ const Hero = () => {
                   hover:shadow-xl hover:shadow-brand-green/25
                   hover:-translate-y-0.5
                   group
+                  w-full sm:w-auto
                 "
               >
                 {heroContent.primaryCta}
@@ -205,6 +206,7 @@ const Hero = () => {
                   text-base rounded-xl
                   transition-all duration-300
                   group
+                  w-full sm:w-auto
                 "
               >
                 <span className="

@@ -8,11 +8,12 @@
 // Author: Temitope Israel Omoniyi
 // ============================================================
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { trustedCompanies } from "@/data";
 
 // ── Animation Variant ─────────────────────────────────────────
-const fadeUp = {
+// Explicitly typed as Variants for absolute codebase consistency
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -65,15 +66,14 @@ const LogoStrip = () => {
             It translates the track from 0 to -50% (half the total width)
             Since the list is duplicated, -50% = exactly one full set
             This creates the seamless loop */}
-        <div className="flex animate-marquee gap-0 w-max">
+        {/* Note: changed gap-0 to gap-12 and dropped individual border-r to avoid snapping glitches */}
+        <div className="flex animate-marquee gap-12 w-max items-center">
           {duplicated.map((company, index) => (
             <div
               key={`${company.name}-${index}`}
               className="
                 flex items-center gap-3
-                px-8 py-3
-                border-r border-bg-border
-                shrink-0
+                py-3 shrink-0 select-none
               "
             >
               {/* Company initial avatar */}
