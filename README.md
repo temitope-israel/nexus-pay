@@ -1,73 +1,143 @@
-# React + TypeScript + Vite
+# Nexus Pay 💳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Nexus Pay Banner](https://placehold.co/1200x400/008751/FFFFFF?text=Nexus+Pay+—+Built+in+Nigeria.+Engineered+for+the+World.)
 
-Currently, two official plugins are available:
+> A premium Nigerian-branded fintech SaaS landing page — built to demonstrate modern, production-grade frontend development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat&logo=tailwindcss)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-EF0097?style=flat&logo=framer)](https://www.framer.com/motion)
+[![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-Nova-000000?style=flat)](https://ui.shadcn.com)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌍 Live Demo
 
-## Expanding the ESLint configuration
+> Coming soon — will be deployed on Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📌 About This Project
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Nexus Pay** is a fictional fintech SaaS product built as a portfolio demo by [Temitope Israel Omoniyi](https://github.com/temitope-israel) — a Full-Stack Developer based in Nigeria.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The goal was to build a landing page that feels premium, culturally rooted, and technically sharp — inspired by the energy of Nigeria's fintech boom (think Paystack, Flutterwave, Moniepoint) but with a unique visual identity.
+
+This is **not** a tutorial clone. Every design decision — color palette, copy tone, layout, motion — was intentional.
+
+---
+
+## ✨ Features
+
+- 🎨 Nigerian-branded design system (flag green, gold, earth tones)
+- 🌑 Dark theme by default
+- ⚡ Animated hero section with dashboard mockup
+- 🏢 Trusted-by company marquee strip
+- 🧩 Bento grid features section
+- 💳 Pricing section with monthly/annual toggle
+- ❓ FAQ accordion
+- 📱 Fully responsive — mobile first
+- 🎞️ Smooth Framer Motion animations throughout
+- ♿ Accessible components via Radix UI
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 19 | UI framework |
+| TypeScript | Type safety |
+| Tailwind CSS v4 | Utility-first styling |
+| Framer Motion | Animations & transitions |
+| Shadcn UI (Nova) | Component library |
+| Radix UI | Accessible primitives |
+| Lucide React | Icon library |
+| Vite | Build tool |
+
+---
+
+## 📁 Folder Structure
+
+nexus-pay/
+├── public/
+├── src/
+│   ├── assets/          # Images, SVGs, fonts
+│   ├── components/
+│   │   ├── layout/      # Navbar, Footer
+│   │   ├── sections/    # Hero, Features, Pricing, FAQ etc.
+│   │   ├── shared/      # Reusable components
+│   │   └── ui/          # Shadcn generated components
+│   ├── data/            # All content & mock data (TypeScript)
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions (cn, etc.)
+│   ├── types/           # Shared TypeScript interfaces
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── components.json      # Shadcn config
+├── tsconfig.json
+├── tsconfig.app.json
+├── vite.config.ts
+└── README.md
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+
+- npm v9+
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/temitope-israel/nexus-pay.git
+
+# Navigate into the project
+cd nexus-pay
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Design Tokens
+
+| Token | Value | Usage |
+|---|---|---|
+| Primary Green | `#008751` | Nigerian flag, CTAs |
+| Deep Green | `#005C37` | Hover states, depth |
+| Gold Accent | `#F5A623` | Premium highlights |
+| Dark BG | `#0A0F0D` | Page background |
+| Surface | `#111916` | Cards, panels |
+| Text Primary | `#F2F2F2` | Headings, body |
+| Text Muted | `#8A9E94` | Subtitles, captions |
+
+---
+
+## 👨🏾‍💻 Author
+
+**Temitope Israel Omoniyi**
+Full-Stack Developer — Lagos, Nigeria
+
+[![GitHub](https://img.shields.io/badge/GitHub-temitope--israel-181717?style=flat&logo=github)](https://github.com/temitope-israel)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+> *"Built in Nigeria. Engineered for the World."*
