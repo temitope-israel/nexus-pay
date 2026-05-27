@@ -7,6 +7,9 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import LogoStrip from "./components/sections/LogoStrip";
+import Features from "./components/sections/Features";
+import HowItWorks from "./components/sections/HowItWorks";
+import Pricing from "./components/sections/Pricing";
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
       <Navbar />
       <Hero />
       <LogoStrip />
+      <Features />
+      <Features />
+      <HowItWorks />
+      <Pricing/>
 
 
       {/* Temporary spacer — will be replaced by Hero section */}

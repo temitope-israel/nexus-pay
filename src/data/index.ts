@@ -4,7 +4,8 @@
 // it makes updates easy without touching component files
 // ============================================================
 
-import { NavLink } from "@/types";
+import { NavLink, Feature, Step, PricingTier } from "@/types";
+
 
 // Navigation links rendered in the Navbar
 export const navLinks: NavLink[] = [
@@ -50,4 +51,146 @@ export const trustedCompanies = [
   { name: "Credpal", industry: "Credit" },
   { name: "Trove", industry: "Investments" },
   { name: "Vendease", industry: "FoodTech" },
+];
+
+
+// Features section — six core Nexus Pay capabilities
+// Mix of small and large cards creates the bento grid asymmetry
+export const features: Feature[] = [
+  {
+    icon: "Zap",
+    title: "Instant Settlements",
+    description:
+      "Get your money when you need it. Nexus Pay settles transactions in real-time — no waiting 3-5 business days like traditional banks.",
+    size: "large",
+    accent: "green",
+  },
+  {
+    icon: "Globe",
+    title: "Pan-African Coverage",
+    description:
+      "Accept payments from 40+ African markets with a single integration. NGN, GHS, KES, ZAR and more.",
+    size: "small",
+  },
+  {
+    icon: "Shield",
+    title: "Bank-Grade Security",
+    description:
+      "256-bit encryption, PCI-DSS compliance, and real-time fraud detection powered by ML models trained on African transaction patterns.",
+    size: "small",
+  },
+  {
+    icon: "BarChart3",
+    title: "Smart Analytics",
+    description:
+      "Understand your revenue like never before. Real-time dashboards, custom reports, and AI-powered insights built for African business owners.",
+    size: "large",
+    accent: "gold",
+  },
+  {
+    icon: "Code2",
+    title: "Developer First",
+    description:
+      "Clean REST APIs, SDKs for all major languages, and documentation that doesn't make you want to quit.",
+    size: "small",
+  },
+  {
+    icon: "Headphones",
+    title: "Local Support",
+    description:
+      "Real humans, Nigerian time zones. Chat, email, and phone support from a team that understands your market.",
+    size: "small",
+  },
+];
+
+
+
+// How It Works — 3 steps explaining the Nexus Pay onboarding flow
+export const steps = [
+  {
+    number: "01",
+    icon: "UserCheck",
+    title: "Create Your Account",
+    description:
+      "Sign up in under 5 minutes. Submit your business details, get verified by our compliance team, and you're live. No paperwork. No branch visits.",
+    highlight: "5 minute setup",
+  },
+  {
+    number: "02",
+    icon: "Code2",
+    title: "Integrate Once",
+    description:
+      "Drop our SDK into your app or use our no-code plugins for Shopify, WooCommerce, and more. One integration. Every payment method across Africa.",
+    highlight: "One integration",
+  },
+  {
+    number: "03",
+    icon: "TrendingUp",
+    title: "Grow Without Limits",
+    description:
+      "Watch revenue flow in real-time. Scale from ₦1M to ₦1B in GMV without changing a single line of code. Nexus Pay grows with you.",
+    highlight: "Unlimited scale",
+  },
+];
+
+
+// Pricing tiers — three plans for different business sizes
+// monthlyPrice/annualPrice in NGN thousands (e.g. 25 = ₦25,000)
+export const pricingTiers: PricingTier[] = [
+  {
+    name: "Starter",
+    monthlyPrice: 0,
+    annualPrice: 0,
+    description:
+      "Perfect for early-stage startups and solo founders testing their first product.",
+    features: [
+      "Up to ₦5M monthly volume",
+      "1.5% transaction fee",
+      "Bank transfers & card payments",
+      "Basic analytics dashboard",
+      "Email support",
+      "API access",
+    ],
+    cta: "Get Started Free",
+    highlighted: false,
+  },
+  {
+    name: "Growth",
+    monthlyPrice: 49,
+    annualPrice: 39,
+    description:
+      "For growing businesses ready to scale across Nigeria and West Africa.",
+    features: [
+      "Up to ₦100M monthly volume",
+      "1.0% transaction fee",
+      "All payment methods",
+      "Advanced analytics & reports",
+      "Priority email & chat support",
+      "Webhooks & API access",
+      "Multi-currency support",
+      "Bulk payouts",
+    ],
+    cta: "Start Growing",
+    highlighted: true,
+    badge: "Most Popular",
+  },
+  {
+    name: "Enterprise",
+    monthlyPrice: null,
+    annualPrice: null,
+    description:
+      "Custom infrastructure for large businesses processing billions in GMV.",
+    features: [
+      "Unlimited monthly volume",
+      "Custom transaction fees",
+      "Dedicated account manager",
+      "SLA-backed uptime guarantee",
+      "Custom integrations",
+      "On-premise deployment option",
+      "24/7 phone support",
+      "Compliance & audit support",
+    ],
+    cta: "Contact Sales",
+    highlighted: false,
+  },
 ];
