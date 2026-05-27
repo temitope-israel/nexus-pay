@@ -12,7 +12,7 @@ import { motion, Variants } from "framer-motion";
 import { trustedCompanies } from "@/data";
 
 // ── Animation Variant ─────────────────────────────────────────
-// Explicitly typed as Variants for absolute codebase consistency
+// Explicitly typed as Variants with defined internal TargetAndTransition properties
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
