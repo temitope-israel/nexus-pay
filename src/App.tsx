@@ -6,12 +6,15 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import LogoStrip from "./components/sections/LogoStrip";
 
 function App() {
   return (
     <main className="bg-bg-base min-h-screen">
       <Navbar />
       <Hero />
+      <LogoStrip />
+
 
       {/* Temporary spacer — will be replaced by Hero section */}
       <div className="container-custom pt-40">

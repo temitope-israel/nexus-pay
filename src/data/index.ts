@@ -33,3 +33,21 @@ export const heroContent = {
     { value: "15ms", label: "Avg. Response Time" },
   ],
 };
+
+
+// Trusted by — fictional African companies for the marquee strip
+// Using a mix of industries to show Nexus Pay's versatility
+export const trustedCompanies = [
+  { name: "Konga", industry: "E-Commerce" },
+  { name: "Andela", industry: "Tech Talent" },
+  { name: "Cowrywise", industry: "Investments" },
+  { name: "Farmcrowdy", industry: "AgriTech" },
+  { name: "Helium Health", industry: "HealthTech" },
+  { name: "Shuttlers", industry: "Mobility" },
+  { name: "Brass", industry: "Banking" },
+  { name: "Omnibiz", industry: "Distribution" },
+  { name: "Sabi", industry: "Commerce" },
+  { name: "Credpal", industry: "Credit" },
+  { name: "Trove", industry: "Investments" },
+  { name: "Vendease", industry: "FoodTech" },
+];
