@@ -8,19 +8,20 @@
 // Author: Temitope Israel Omoniyi
 // ============================================================
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { trustedCompanies } from "@/data";
 
 // ── Animation Variant ─────────────────────────────────────────
-// Explicitly typed as Variants with defined internal TargetAndTransition properties
-const fadeUp: Variants = {
+// 'as const' stops TypeScript from widening "easeOut" to a generic string,
+// which is what triggers the TS2322 'not assignable to type Variants' error.
+const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" },
   },
-};
+} as const;
 
 const LogoStrip = () => {
   // We duplicate the companies array so the marquee loops seamlessly.
