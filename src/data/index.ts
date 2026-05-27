@@ -13,3 +13,23 @@ export const navLinks: NavLink[] = [
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
+
+
+
+
+// Hero section content
+export const heroContent = {
+  badge: "Africa's #1 Payment Infrastructure",
+  headline: "Move Money",
+  headlineAccent: "Without Limits.",
+  subheadline:
+    "Nexus Pay gives businesses across Africa the tools to collect payments, pay vendors, and manage money — fast, secure, and at scale.",
+  primaryCta: "Start for Free",
+  secondaryCta: "See How It Works",
+  stats: [
+    { value: "₦2.4T+", label: "Processed Monthly" },
+    { value: "98.9%", label: "Uptime Guaranteed" },
+    { value: "40+", label: "African Markets" },
+    { value: "15ms", label: "Avg. Response Time" },
+  ],
+};

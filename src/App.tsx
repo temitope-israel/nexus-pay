@@ -5,11 +5,13 @@
 // ============================================================
 
 import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
 
 function App() {
   return (
     <main className="bg-bg-base min-h-screen">
       <Navbar />
+      <Hero />
 
       {/* Temporary spacer — will be replaced by Hero section */}
       <div className="container-custom pt-40">
