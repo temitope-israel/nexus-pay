@@ -4,7 +4,7 @@
 // it makes updates easy without touching component files
 // ============================================================
 
-import { NavLink, Feature, Step, PricingTier } from "@/types";
+import { NavLink, Feature, PricingTier, Step } from "@/types";
 
 
 // Navigation links rendered in the Navbar
@@ -106,7 +106,7 @@ export const features: Feature[] = [
 
 
 // How It Works — 3 steps explaining the Nexus Pay onboarding flow
-export const steps = [
+export const steps: Step[] = [
   {
     number: "01",
     icon: "UserCheck",

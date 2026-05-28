@@ -67,14 +67,14 @@ export interface Feature {
   accent?: "green" | "gold";
 }
 
-// How It Works step structure
-export interface Step {
-  number: string;
-  icon: string;
-  title: string;
-  description: string;
-  highlight: string;
-}
+// // How It Works step structure
+// export interface Step {
+//   number: string;
+//   icon: string;
+//   title: string;
+//   description: string;
+//   highlight: string;
+// }
 
 // Single pricing tier structure
 export interface PricingTier {
