@@ -70,7 +70,7 @@ function App() {
               <FAQ />
               <CTABanner />
             </main>
-
+// Footer Page
             <Footer />
 
             {/* Scroll to top floating button */}
